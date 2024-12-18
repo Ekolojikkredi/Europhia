@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atık Yönetim Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Anasayfa</a></li>
+                <li><a href="#studentRegistration">Öğrenci Kaydı</a></li>
+                <li><a href="#schoolRegistration">Okul Kaydı</a></li>
+                <li><a href="#wasteEntry">Atık Girişi</a></li>
+                <li><a href="#dataView">Veri Görüntüleme</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Atık Yönetim Sistemi</h1>
+        <p>Geri dönüşüm ve atık yönetimi konusunda farkındalık oluşturmak için buradayız.</p>
+    </section>
+
+    <section id="studentRegistration">
+        <h2>Öğrenci Kaydı</h2>
+        <form id="studentForm">
+            <label for="studentName">Ad Soyad:</label>
+            <input type="text" id="studentName" name="studentName" required>
+
+            <label for="studentMail">E-posta:</label>
+            <input type="email" id="studentMail" name="studentMail" required>
+
+            <label for="studentSchool">Okul Adı:</label>
+            <input type="text" id="studentSchool" name="studentSchool" required>
+
+            <button type="submit">Kaydı Tamamla</button>
+        </form>
+    </section>
+
+    <section id="schoolRegistration">
+        <h2>Okul Kaydı</h2>
+        <form id="schoolForm">
+            <label for="schoolName">Okul Adı:</label>
+            <input type="text" id="schoolName" name="schoolName" required>
+
+            <label for="schoolCity">Şehir:</label>
+            <input type="text" id="schoolCity" name="schoolCity" required>
+
+            <label for="schoolDistrict">İlçe:</label>
+            <input type="text" id="schoolDistrict" name="schoolDistrict" required>
+
+            <label for="schoolCode">Okul Kodu:</label>
+            <input type="text" id="schoolCode" name="schoolCode" required>
+
+            <button type="submit">Okul Kaydını Tamamla</button>
+        </form>
+    </section>
+
+    <section id="wasteEntry">
+        <h2>Atık Girişi</h2>
+        <form id="wasteForm">
+            <label for="wasteType">Atık Türü:</label>
+            <select id="wasteType" name="wasteType" required>
+                <option value="kağıt">Kağıt</option>
+                <option value="plastik">Plastik</option>
+                <option value="cam">Cam</option>
+                <option value="metal">Metal</option>
+                <option value="elektronik">Elektronik</option>
+                <option value="yağ">Yağ</option>
+                <option value="tekstil">Tekstil</option>
+                <option value="pil">Pil</option>
+            </select>
+
+            <label for="wasteKg">Atık Miktarı (kg):</label>
+            <input type="number" id="wasteKg" name="wasteKg" required>
+
+            <label for="wasteSorted">Ayrıştırıldı mı?</label>
+            <select id="wasteSorted" name="wasteSorted" required>
+                <option value="evet">Evet</option>
+                <option value="hayır">Hayır</option>
+            </select>
+
+            <button type="submit">Atığı Kaydet</button>
+        </form>
+    </section>
+
+    <section id="dataView">
+        <h2>Veri Görüntüleme</h2>
+        <div id="dataContainer">
+            <p>Atık girişlerinizi buradan görüntüleyebilirsiniz.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
